@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.para{
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+
+.container{
+    padding: 10px 10px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.logo {
+    height: 4%;
+    width: 6%;
+    margin: 10px 20px;
+    
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    font-weight: bold;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+.socialIcons{
+    display: flex;
+    justify-content: left;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 5px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 1em;
+    color: #080808;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    transition: 0.5s;
+}
+
+.socialIcons .s1:hover{
+    background-color: rgb(225, 52, 147);
+}
+
+.socialIcons .s2:hover{
+    background-color: red;
+}
+
+.socialIcons .s3:hover{
+    background-color: yellow;
+}
+
+.socialIcons .s4:hover{
+    background-color: rgb(108, 108, 250);
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.header-text{
+    margin-top: 15%;
+    font-size: 30px;
+    margin-left: 8%;
+}
+
+.header-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.header-text h1 span{
+    color: red;
+}
+
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 48px;
+    background: lightcoral;
+    border-radius: 40px;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn:hover{
+    background-color: red;
+}
+
+
+
+.images{
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+   
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+   
+}
+
+.images:hover .shape{
+    bottom: 40px;
+}
+
+.images:hover .me{
+    left: 45%;
+}
+
+/*----------------------------------------ABOUT SECTION--------------------------------*/
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    height: 90%;
+    border-radius: 15px;
+    margin-left: 30px;
+    border: 10px solid rgb(227, 20, 20);
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: white
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: rgb(248, 118, 118);
+    font-size: 18px;
+}
+
+li{
+    margin: 25px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;   
+}
+
+/*--------------------------------------------------PROJECTS-------------------------------------------------*/
+
+#projects{
+    padding: 30px 0;
+}
+
+.projects-list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 40px;
+    margin-left: 60px;
+    margin-top: 60px;
+    margin-right: 60px;
+    height: 50%;
+    width: 50%;
+}
+
+.projects-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.projects-list div h2{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.projects-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.projects-list div a:hover{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.projects-list div:hover{
+    background: rgb(225, 91, 91);
+    transform: translateY(-10px);
+}
+
+
+/*---------------------------------------------END PROJECTS-------------------------------------------------*/
+
+
+/*---------------------------------------------Footer-------------------------------------------------
+
+footer{
+    background-color: rgb(248, 118, 118);
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6.5%;
+    height: 40px;
+    position: relative;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: #080808;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerBottom{
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: #000;    
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 0px 5px;
+}  ---------------------------------*/
+
+/*-------------------------------END FOOTER SECTION----------------------------------*/

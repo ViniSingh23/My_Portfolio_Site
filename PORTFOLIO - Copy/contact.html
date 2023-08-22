@@ -1,0 +1,249 @@
+<!----------------------------------------------------------CONTACT SECTION-------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" 
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header" style="background-color: rgb(220, 115, 115);">
+            <nav>
+                <img src="C:\\Users\\hp\\Desktop\\New Folder (2)\\PROJECTSS\\PORTFOLIO - Copy\\Images\\Logo2.png" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div> 
+
+
+
+<section class="contact">
+    <div class="content">
+        <h2>Contact Me</h2><br>
+        <p>Enter your information and message below, I will definitely get back to you. <br> Thankyou for contacting me!</p><br>
+    </div>
+    <div class="contain">
+        <div class="contactInfo">
+            <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Address</h3><br>
+                    <p>118-P Sector-4 <br> Pushp Vihar, <br> New Delhi- 110017</p><br>
+                </div>
+            </div>
+
+            <div class="box">
+            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Phone</h3><br>
+                    <p>8448041411</p><br>
+                </div>
+            </div>
+
+            <div class="box">
+            <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Email</h3><br>
+                    <p>vineeta.vini23@gmail.com</p><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactForm">
+            <form name="submit-to-google-sheet">
+            <h2> Send Message</h2>
+                <div class="inputBox" style="padding: 10px; margin: 10px 0;">
+                    <input type="text" name="Name" placeholder="Your Name"  required="required"><br><br>
+                    <input type="number" name="Mobile No." placeholder="Enter your Mobile No."  required="required"><br><br>       
+                    <input type="email" name="Email" placeholder="Email"  required="required"><br><br>                
+                    <textarea name="Message" placeholder="Type your Message...."  rows="4" required="required"></textarea><br><br>
+                    <button type="submit" style="padding: 10px; background: rgb(217, 70, 70); font-size: 18px; cursor: pointer;"><a href="thanks.html">SEND</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzbbXhOLixqTompsZHKWFfAQOqo8qD80qcPTb7zzWdLoXDAqodzd99GORHQn1n5wEQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
+
+<style>
+    .contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 600;
+    color: #c01e1e;
+}
+
+.contact .content p{
+    font-weight: 300;
+    color: #fff;
+}
+
+.contain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contain .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contain .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contain .contactInfo .box .icon{
+    min-width: 50px;
+    height: 50px;
+    background: #c01e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.contain .contactexttInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contain .contactInfo .box .text h3{
+    font-weight: 500;
+    color: rgb(215, 77, 77);
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span
+.contactForm .inputBox textarea:focus ~ span
+.contactForm .inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px)
+{
+    .contact{
+        padding: 50px;
+    }
+    .contain{
+        flex-direction: column;
+    }
+    .contain .contactInfo{
+        margin-bottom: 40px;
+    }
+    .contain .contactInfo,
+    .contactForm{
+        width: 100%;
+    }
+}
+</style>
+
+
+
+
+
+
+<!------------------------------------------------------END CONTACT SECTION-------------------------------------------------------->

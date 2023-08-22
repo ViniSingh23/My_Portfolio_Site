@@ -1,0 +1,89 @@
+<!----------------------------------- THIS IS ABOUT SECTION -------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header" style="background-color: rgb(220, 115, 115);">
+            <nav>
+                <img src="C:\\Users\\hp\\Desktop\\New Folder (2)\\PROJECTSS\\PORTFOLIO - Copy\\Images\\Logo2.png" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div> 
+
+
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="C:\\Users\\hp\\Desktop\\New Folder (2)\\PROJECTSS\\PORTFOLIO - Copy\\Images\\MyPic.jpg" style="height: 100%; width: 100%;">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">ABOUT ME</h1><br><br>
+                <p class="para" style="font-size: 17px; font-weight: 300; font-style: oblique; "> My name is Vineeta, I am from Delhi. I am doing Master's of Technology in Computer Science and Engineering (final semester) from Echelon Institute of Technology, faridabad.
+                    I have done B.Tech in CSE from JB Knowledge Park, Faridabad with an aggregation of 66.07% & have done Diploma with aggregationof 68% in the same field from BSF Polytechnic STS Tigri, New Delhi. <br>
+            Coming to my technical skills, includes programming in python, PHP, JavaScript and basic knowledge of databases. I am also familiar with web development, HTML & CSS (also know wordpress). I have use all theses skills to build several projects. <br>
+            About my family background, My father, Shri Mahendra Singh serving in Border Security Force (BSF) as Inspector. My mother, Smt. Savita Rani is house wife & two sister from which one is married and the other one is a YouTuber.<br>
+        Project includes, Language Translator, Voice assistant etc. I have also completed a certfication course on python programming offered by simplilearn.<br>
+    Coming to my hobbies, I love to travel alot and also love to paint and arts. 
+  </p><br><br>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links onclick=" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span> <br> HTML and CSS</li>
+                        <li><span>Programming languages</span><br> PHP, Python & JavaScript</li>
+                        <li><span>Database</span><br> MySQL </li>
+                        <li><span>CMS (content Management System)</span> <br> Wordpress </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2023: M.Tech in computer science & engineering(Pursuing) </span> <br> Echelon Institute of Technology, Faridabad (Haryana)</li>
+                        <li><span>2018-2021: B.Tech in computer science & Engineering</span><br> JB Knowledge Park, Faridabad (Haryana)</li>
+                        <li><span>2015-2018: Diploma in Computer Engineering </span><br> BSF Polytechnic STS Tigri, New Delhi </li>
+                        <li><span>2015: Secondary school</span> <br>Kendriya Vidyalaya  </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-------------------------------------SKILLS------------------------------------------->
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+</body>
+</html>
